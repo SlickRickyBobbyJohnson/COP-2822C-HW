@@ -11,3 +11,45 @@
    Supporting Files: none
 
 */
+/* Sets styles */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+}
+
+/* h1 headings style */
+header h1 {
+  color: yellow;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 28px;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+/* h2 headings style */
+article h2 {
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 5px;
+}
+
+article p {
+  text-align: justify;
+}
+
+/* keyword class color */
+.keyword strong {
+  color: yellow;
+  font-weight: normal;
+}
+
+/* Center paragraphs  */
+footer p {
+  text-align: center;
+}
+
+/* no borders */
+img[usemap] {
+  border: 0;
+}
