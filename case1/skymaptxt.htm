@@ -16,26 +16,38 @@
                         sky0.jpg - sky23.jpg, skyweb.css, skyweb.jpg
 
    -->
-
-      <meta charset="UTF-8" />
-      <title>SkyWeb: The Planisphere</title>
-      <script src="modernizr-1.5.js"></script>
-
-      <link href="skyweb.css" rel="stylesheet" type="text/css" />
-
-
-
-   </head>
+  <meta charset="UTF-8">
+  <title>Sky Map</title>
+  <link rel="stylesheet" href="style.css">
+  
+ 
+  <script src="datetime.js"></script>
+  
+ 
+  <script>
+    /* 
+      timeStr is a text string containing the current date and time
+      mapNum is the number of the map to display in the planisphere
+    */
+let timeStr = showDateTime();
+let mapNum = getMap();
+ document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("sky").outerHTML = 
+        `<img id="sky" src="skymap${mapNum}.jpg" alt="" />`;
+document.getElementById("datetime").textContent = timeStr;
+    });
+  </script>
+</head>
 
    <body>
 
       <header><img src="skyweb.jpg" alt="SkyWeb" /></header>
 
       <div id="maps">
-         <img id="sky" src="sky0.jpg" alt="" />
+          <img id="sky" src="sky0.jpg" alt="" />
          <img id="mask" src="mask.gif" alt="" />
          <div id="datetime">
-            January 1, 2014, 12:00 a.m. 
+          <p id="datetime">January 1, 2014, 12:00 a.m.</p>
         </div>
       </div>
 
